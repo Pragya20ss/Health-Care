@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vciewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup-login.css" type="text/css" >
+    <title>Sign up to our website</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Signup()">Sign Up</button>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+            </div>
+            <div class="social-icons">
+                <img src="fb.png" onclick="fb()"> 
+                <img src="insta.png" onclick="insta()"> 
+                <img src="ggl.png" onclick="ggl()">
+            </div>
+            <form id="Sign-Up" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Confirm Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button type="button" class="submit-btn" onclick="Login()">Sign Up</button>
+            </form>
+            <form id="Log-In" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="button" class="submit-btn" onclick="Tracker()">Log In</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById("Sign-Up")
+        var y=document.getElementById("Log-In")
+        var z=document.getElementById("btn")
+        function Signup(){
+          x.style.left="50px";
+          y.style.left="450px";
+          z.style.left="0px";
+        }
+        function Login(){
+          x.style.left="-400px";
+          y.style.left="50px";
+          z.style.left="110px";
+        }
+        function Tracker(){
+            window.location.href="/index.html";
+        }
+        function fb(){
+            window.location.href="https://www.facebook.com";
+        }
+        function insta(){
+            window.location.href="https://www.instagram.com/";
+        }
+        function ggl(){
+            window.location.href="https://www.google.com/accounts/Login";
+        }
+    </script>
+</body>
+</html>
